@@ -1,0 +1,21 @@
+ async function users_search(user_name) {
+
+  
+  request.get('https://api.twitter.com/1.1/users/show.json', {
+  oauth:AuthenticationKeys,
+  qs:{screen_name:user_name}
+  }, 
+  async(err, res, body) => {
+    
+
+
+  var data = await JSON.parse(body);
+  console.log('B') 
+
+  })
+ 
+  console.log('A')
+  // return data
+}
+  
+users_search('niralon')
